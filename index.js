@@ -7,10 +7,10 @@ const app = express();
 app.use('/', createProxyMiddleware({
   target: 'https://alexbaker.8thwall.app/vpsmap/',
   changeOrigin: true,
+  secure: true,
   onProxyReq: (proxyReq, req, res) => {
     proxyReq.setHeader('Origin', 'https://alexbaker.8thwall.app');
     proxyReq.setHeader('Referer', 'https://alexbaker.8thwall.app');
-    proxyReq.setHeader('Host', 'https://alexbaker.8thwall.app')
   }
 }));
 
