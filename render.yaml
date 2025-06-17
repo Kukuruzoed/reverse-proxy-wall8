@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: reverse-proxy-wall8-service
+    env: node
+    plan: hobby
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    region: oregon
