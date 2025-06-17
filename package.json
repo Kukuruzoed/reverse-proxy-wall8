@@ -1,6 +1,25 @@
-mkdir render-proxy && cd render-proxy
-npm init -y
-npm install express http-proxy-middleware
-"scripts": {
-  "start": "node index.js"
+{
+  "name": "render-proxy",
+  "version": "1.0.0",
+  "description": "Reverse proxy with custom Origin and Referer headers for 8thWall",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "proxy",
+    "reverse-proxy",
+    "express",
+    "8thwall",
+    "render"
+  ],
+  "author": "AlexBaker",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
