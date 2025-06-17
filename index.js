@@ -10,6 +10,7 @@ app.use('/', createProxyMiddleware({
   onProxyReq: (proxyReq, req, res) => {
     proxyReq.setHeader('Origin', 'https://alexbaker.8thwall.app/vpsmap/');
     proxyReq.setHeader('Referer', 'https://alexbaker.8thwall.app/vpsmap/');
+    proxyReq.setHeader('Host', 'https://alexbaker.8thwall.app/vpsmap/')
   }
 }));
 
